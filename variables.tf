@@ -10,7 +10,7 @@ variable "az_count" {
 }
 
 variable "ecs_task_execution_role" {
-  default     = "myECcsTaskExecutionRole"
+  default     = "myECS TaskExecutionRole"
   description = "ECS task execution role name"
 }
 
