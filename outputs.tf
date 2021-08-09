@@ -45,12 +45,6 @@ resource "aws_ecs_service" "test-service" {
 
   depends_on = [aws_alb_listener.testapp, aws_iam_role_policy_attachment.ecs_task_execution_role]
 }
-ubuntu@ip-172-31-46-87:~/terraform/ecs$ vi first_ec2.tfbk
-ubuntu@ip-172-31-46-87:~/terraform/ecs$ ls
-alb.tf           cloudwatch_loggroup.tf  first_ec2.tfbk  outputs.tf   santhosh_credentials.csv  templates          terraform.tfstate.backup  vpc.tf
-auto_scaling.tf  ecs.tf                  iam_role.tf     provider.tf  security-groups.tf        terraform.tfstate  variables.tf
-ubuntu@ip-172-31-46-87:~/terraform/ecs$ cat  outputs.tf
-# outputs you can kist required endpoints, ip or instanceid's
 
 output "alb_hostname" {
   value = aws_alb.alb.dns_name
